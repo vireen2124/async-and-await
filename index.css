@@ -1,0 +1,194 @@
+body{
+    margin:0;
+    padding:0;
+}
+.starwars-container{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url("images/bg1.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(215, 250, 224);
+}
+fieldset{
+    color:rgb(4, 0, 248);
+    letter-spacing: .2rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 130%;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    
+}
+legend{
+    color:white;
+    font-weight: 900;
+    font-size: 150%;
+}
+fieldset div{
+    margin:.5rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:65%
+
+}
+span{
+    padding:.5rem 1rem;
+    
+}
+.starwars-data{
+    height:3vh;
+    width:35vw;
+    background-color: rgb(23, 221, 228);
+    border-radius: .5rem;
+    color:rgb(32, 51, 218);
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.back{
+    width:17.5%;
+    height:100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    color:rgb(179, 199, 3);
+    position: fixed;
+    left: 0;  
+    animation: grow;
+    animation-iteration-count: infinite;
+    animation-duration: .6s;
+}
+.front{
+    width:17.5%;
+    height:100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    color:rgb(179, 199, 3);
+    position: fixed;
+   right:0 ;
+   animation-name: grow;
+   animation-iteration-count: infinite;
+   animation-duration: .6s;
+
+}
+.next-page{
+    position:fixed;
+    right:1rem;
+    bottom: 1rem;
+    z-index:1;
+    padding:1rem;
+    border-radius: 5px;
+    background-color:rgb(179, 199, 3) ;
+    font-size:90%;
+    text-transform: uppercase;
+    box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+-webkit-box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+-moz-box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+visibility:hidden;
+}
+.prev-page{
+    position:fixed;
+    left:1rem;
+    bottom: 1rem;
+    z-index:1;
+    padding:1rem;
+    border-radius: 5px;
+    background-color:rgb(179, 199, 3) ;
+    font-size:90%;
+    text-transform: uppercase;
+    box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+-webkit-box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+-moz-box-shadow: 10px -3px 48px 8px rgba(0,0,0,0.74) inset;
+visibility:hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+.loading-container{
+    display:block;
+    width:30%;
+    height:30vh;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    padding:1rem;
+    border-radius: 1rem;
+    background-color: rgb(0, 183, 255);
+    position:absolute;
+    top:30%;
+    left:33%;
+    z-index: 999;
+    visibility: visible;
+}
+.hide-loading{
+    display:none;
+    
+}
+.loading-container span{
+    color:blue;
+    text-transform: uppercase;
+    text-align: center;
+    justify-self: center;
+    font-size:150%;
+    font-weight: bolder;
+}
+.loading-bars-container{
+    margin-top: auto;
+    border:1px solid blue;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    margin-right: auto;
+ 
+    
+}
+.bars-container{
+    display:flex;
+    flex-direction: row;
+    animation: loading;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.bars{
+    background-color:blue;
+    height:.5rem;
+    width:.5rem;
+    margin:.2rem;
+
+
+}
+@keyframes loading{
+    from{
+       margin-right: auto; 
+    }
+    to{
+        margin-left: 85%;
+    }
+} 
+@keyframes grow {
+    from{
+        font-size: 250%;
+        
+    }
+    to{
+        font-size: 280%;
+        
+    }
+}
